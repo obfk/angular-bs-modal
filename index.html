@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+  <body class="container">
+
+    <script type="text/ng-template" id="myModalContent.html">
+      <div class="modal-header">
+        <h3 class="modal-title">Bacon or Beer Can</h3>
+      </div>
+
+      <div class="modal-body">
+        <p>Bacon ipsum dolor sit amet ball tip andouille venison pig hamburger, ham kielbasa shank t-bone. Swine pork belly leberkas biltong. Salami cow kielbasa brisket turducken swine sirloin venison boudin andouille pork jowl meatloaf corned beef meatball. Bacon brisket pork chop leberkas kielbasa ground round, strip steak tail.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+      </div>
+    </script>
+
+    <div ng-controller="ModalCtrl">
+      <button class="jumbotron" ng-click="open()">Open me!</button>
+      <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="example.js"></script>
+  </body>
+</html>
