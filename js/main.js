@@ -1,12 +1,11 @@
 angular.module('myApp', ['ui.bootstrap', 'myApp.controllers']);
 
 angular.module('myApp.controllers', [])
-  .controller('ModalCtrl', [ '$scope', '$modal', '$log', function ($scope, $modal, $log) {
+  .controller('ModalCtrl', [ '$scope', '$modal', function ($scope, $modal) {
 
     $scope.open = function () {
-
       var modalInstance = $modal.open({
-        templateUrl: 'myModalContent.html',
+        template: 'templates/modal.html',
         controller: 'ModalInstanceCtrl'
       });
     };
