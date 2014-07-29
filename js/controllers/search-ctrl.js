@@ -1,7 +1,8 @@
 angular.module('myApp')
-  .controller('SearchCtrl', ['$scope', '$modal', '$http', function($scope, $modal, $http){
-    $scope.open = function () {var modalInstance = $modal.open({
-      templateUrl: './js/templates/modal.html'
-    });
-  };
-}]);
+  .controller('SearchCtrl', ['$scope', '$modal', '$http', 'modalService', function($scope, $modal, $http, modalService) {
+    var modalInstance = modalService;
+
+    $scope.open = function () {
+      modalInstance.show('./js/templates/search-modal.html');
+    };
+  }]);
