@@ -3,4 +3,5 @@ angular.module('myApp')
     $scope.open = function () {var modalInstance = $modal.open({
       templateUrl: './js/templates/modal.html'
     });
+  };
 }]);
