@@ -5,4 +5,8 @@ angular.module('myApp')
     $scope.open = function () {
       modalInstance.show('./js/templates/search-modal.html');
     };
+
+    $scope.close = function () {
+      modalInstance.close();
+    };
   }]);
