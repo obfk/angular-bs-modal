@@ -1,12 +1,10 @@
 angular.module('myApp')
-  .controller('SearchCtrl', ['$scope', '$modal', '$http', 'modalService', function($scope, $modal, $http, modalService) {
-    var modalInstance = modalService;
-
-    $scope.open = function () {
-      modalInstance.show('./js/templates/search-modal.html');
+  .controller('SearchCtrl', ['$scope', '$http', 'modalService', function($scope, $http, modalService) {
+    var modalDefaults = {
+      templateUrl: './js/templates/search-modal.html'
     };
 
-    $scope.close = function () {
-      modalInstance.close();
+    $scope.open = function () {
+      modalService.showModal(modalDefaults, {})
     };
   }]);

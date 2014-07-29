@@ -1,8 +1,10 @@
 angular.module('myApp')
-  .controller('DirectionsCtrl', ['$scope', '$modal', '$http', 'modalService', function($scope, $modal, $http, modalService) {
-    var modalInstance = modalService;
+  .controller('DirectionsCtrl', ['$scope', '$http', 'modalService', function($scope, $http, modalService) {
+    var modalDefaults = {
+      templateUrl: './js/templates/directions-modal.html'
+    };
 
     $scope.open = function (type) {
-      modalInstance.show('./js/templates/directions-modal.html');
+      modalService.showModal(modalDefaults, {})
     };
   }]);
